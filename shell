@@ -1,0 +1,22 @@
+1.shell变量：字符串代表可变内容。
+2.变量配置 =连接 =两侧不能有空格 变量名不能数字开头 name=yang 取内容 $name
+变量内容有空格 使用""或'' 扩起 使用"" 里面的$name 会被转义成 yang ''普通字符
+借由其他命令提供信息 $(命令)
+为变量扩增内容 ${变量}累加内容
+变成环境变量 export name
+大写字符 通常为环境变量
+取消变量 unset name
+3 env 观察环境变量 set所有变量 
+echo $$ 本shell的pid echo $? 上次命令返回
+4 locale 语系变量 乱码问题
+5 变量键盘读取 read [-pt] varname -p 提示信息 -t 等待时间
+6 变量类型宣告 declare [-aixr] varname
+-a array数组型 -i integer -x export -r readonly 不能改不能unset
+7 文件系统限制 ulimit -a 列出所有参数 修改相应对应 复原通过注销再登录 一般用户只能改小容量
+8 变量内容取代删除 
+${变量#关键词}删除符合关键词最少 从头开始  关键字/*: 表示以/开头 以: 结尾 *中间任意
+## 最多 从头开始 %最少 从尾开始 %%最多 从尾开始
+%{变量/旧0字符串/新字符串} 替换第一个 %{变量//旧字符串/新字符串} 替换全部
+变量测试与替换      str无配置   str空   str有非空配置
+var=${str-exp}    var=exp     var=     var=$str
+var=${str:-exp}   var=exp     var=exp  var=$str
