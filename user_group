@@ -1,0 +1,7 @@
+1.添加用户 在sudo 组中或root 权限下
+sudo adduser username
+2.切换用户 su username 
+3.切换用户同时改到user\home 目录下 su -l suername
+4.查看组 groups username
+5.查看当前用户 who -m -a 全部 -d死的
+6.更改用户所属组 zai
