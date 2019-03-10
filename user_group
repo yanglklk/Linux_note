@@ -4,4 +4,6 @@ sudo adduser username
 3.切换用户同时改到user\home 目录下 su -l suername
 4.查看组 groups username
 5.查看当前用户 who -m -a 全部 -d死的
-6.更改用户所属组 zai
+6.更改用户所属组 sudo usermod -G groupname username 
+7.删除用户 sudo deluser username --remove-home 同时删除home
+
